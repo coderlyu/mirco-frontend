@@ -11,9 +11,9 @@ const devConf = {
   },
   devServer: {
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/api': 'http://localhost:3001'
     },
-    port: 3000,
+    port: 3001,
     contentBase: path.resolve(__dirname, '../public'),
     compress: true,
     historyApiFallback: true,

@@ -3,15 +3,23 @@ import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
 import axios from '@/plugins/axios.js'
+import singleSpaVue from 'single-spa-vue'
 // style
 import '@/assets/app.css'
 import '@/assets/main.scss'
 // plugins
 import '@/router/permision.js'
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
+const vueLifecycles = singleSpaVue({
+  Vue,
+  appOptions: {
+    el:'#app',
+    router,
+    store,
+    render: h => h(App)
+  },
 })
-.$mount('#app')
+
+export const bootstrap = vueLifecycles.bootstrap
+export const mount = vueLifecycles.mount
+export const unmount = vueLifecycles.unmount

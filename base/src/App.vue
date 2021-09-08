@@ -1,10 +1,5 @@
 <template>
   <div class="root">
-    <img src="./assets/images/logo.jpeg" alt="">
-    <h1>{{ message }}</h1>
-    <span class="test">测试样式</span>
-    <router-link to="/home" >to home</router-link>
-    <router-link to="/about" >to about</router-link>
     <router-view />
   </div>
 </template>

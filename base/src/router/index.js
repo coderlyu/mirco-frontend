@@ -5,15 +5,17 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('views/Home.vue')
+    path: '/main',
+    name: 'Main'
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('views/About.vue')
+    path: '/custom',
+    name: 'Custom'
   },
+  {
+    path: '/',
+    redirect: '/main'
+  }
 ]
 
 export default new VueRouter({

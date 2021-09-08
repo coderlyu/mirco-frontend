@@ -4,6 +4,7 @@ import router from '@/router'
 import store from '@/store'
 import axios from '@/plugins/axios.js'
 import { registerApplication, start } from 'single-spa'
+import { loadApp } from '@/utils/index.js'
 // style
 import '@/assets/app.css'
 import '@/assets/main.scss'
@@ -22,9 +23,15 @@ new Vue({
 
 const apps = [
   {
-    name: 'home',
-    app: () => import(),
-    activeWhen: (location) => location.pathname.startsWith('/home'),
+    name: 'main',
+    app: loadApp(`//${window.location.host}/`, 'main'),
+    activeWhen: (location) => location.pathname.startsWith('/main'),
+    customProps: {}
+  },
+  {
+    name: 'custom',
+    app: loadApp(`//${window.location.host}/`, 'custom'),
+    activeWhen: (location) => location.pathname.startsWith('/custom'),
     customProps: {}
   }
 ]

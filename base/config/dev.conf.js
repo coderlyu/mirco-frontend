@@ -1,7 +1,7 @@
 const path = require('path')
 const { merge } = require('webpack-merge')
 const baseConf = require('./base.conf')
-
+const proxys = require('../dev.js')
 const cwd = process.cwd()
 
 const devConf = {
@@ -10,9 +10,7 @@ const devConf = {
     publicPath: '/',
   },
   devServer: {
-    proxy: {
-      '/api': 'http://localhost:3000'
-    },
+    proxy: proxys.proxy,
     port: 3000,
     contentBase: path.resolve(__dirname, '../public'),
     compress: true,
