@@ -5,16 +5,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/main',
+    path: '/home',
     name: 'Main'
   },
   {
     path: '/custom',
     name: 'Custom'
-  },
-  {
-    path: '/',
-    redirect: '/main'
   }
 ]
 

@@ -4,15 +4,15 @@ module.exports = {
       target: 'http://localhost:3000',
       changeOrigin: true
     },
-    '/main/static': {
-      target: 'http://localhost:3001',
+    '/main/static/': {
+      target: 'http://localhost:3002',
       changeOrigin: true,
       pathRewrite: {
         '^/main': ''
       }
     },
-    '/custom/static': {
-      target: 'http://localhost:3002',
+    '/custom/static/': {
+      target: 'http://localhost:3001',
       changeOrigin: true,
       pathRewrite: {
         '^/custom': ''

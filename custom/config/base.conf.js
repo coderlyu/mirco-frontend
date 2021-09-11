@@ -22,7 +22,9 @@ module.exports = {
   entry: path.resolve(__dirname, '../src/index.js'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'static/js/[name].js'
+    filename: 'static/js/custom.[name].js',
+    library: 'custom',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [

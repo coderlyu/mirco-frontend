@@ -20,6 +20,7 @@ const devConf = {
     hot: true,
     https: false,
     noInfo: false,
+    inline: false
   },
   resolve: {
     alias: {
