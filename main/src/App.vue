@@ -1,5 +1,5 @@
 <template>
-  <div class="root">
+  <div class="main-root">
     <h1>{{ message }}</h1>
     <span class="test">测试样式</span>
     <router-link to="/home" >to home</router-link>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style>
-.root {
+.main-root {
   display: flex;
   justify-content: center;
   align-items: center;

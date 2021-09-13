@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="root">
+  <div id="app">
     <router-view />
   </div>
 </template>
@@ -13,23 +13,3 @@ export default {
   }
 }
 </script>
-<style>
-.root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-img {
-  align-self: center;
-  height: 100%;
-}
-h1 {
-  text-align: center;
-}
-</style>
-<style scoped>
-.test {
-  font-size: 30px;
-}
-</style>
